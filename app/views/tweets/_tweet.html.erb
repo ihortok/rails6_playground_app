@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(tweet) do %>
+  <div style="border:1px solid black; margin-bottom: 10px">
+    <p>body: <%= tweet.body %></p>
+    <p>likes_counter: <%= tweet.likes_counter %></p>
+    <p><%= link_to 'Show', tweet %> | <%= link_to 'Edit', edit_tweet_path(tweet) %> | <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
